@@ -28,6 +28,13 @@ class AuthController extends Controller
         ]);
     }
 
+    public function logout()
+    {
+        auth()->logout();
+
+        return response()->json('Logged out');
+    }
+
     public function guard()
     {
         return Auth::guard();
