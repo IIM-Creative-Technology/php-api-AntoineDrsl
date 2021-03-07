@@ -35,9 +35,9 @@ class CreateSubjectsTable extends Migration
     public function down()
     {
         Schema::table('subjects', function (Blueprint $table) {
-            $table->dropForeign(['class_id']);
+            $table->dropForeign(['classe_id']);
             $table->dropForeign(['teacher_id']);
-            $table->dropColumn(['class_id', 'teacher_id']);
+            $table->dropColumn(['classe_id', 'teacher_id']);
         });
         Schema::dropIfExists('subjects');
     }
