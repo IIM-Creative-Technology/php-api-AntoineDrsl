@@ -3,6 +3,8 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ClasseController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\SubjectController;
+use App\Http\Controllers\TeacherController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -26,7 +28,14 @@ Route::group([
 });
 
 Route::middleware('jwt.auth')->group(function() {
-    Route::apiResource('classes', ClasseController::class)->except(['destroy']);
-    Route::get('classes/{class}/students', [ClasseController::class, 'students']);
     Route::apiResource('students', StudentController::class);
+    Route::apiResources([
+        'classes' => ClasseController::class,
+        'teachers' => TeacherController::class,
+        'subjects' => SubjectController::class
+    ], [
+        'except' => 'destroy'
+    ]);
+
+    Route::get('classes/{class}/students', [ClasseController::class, 'students']);
 });

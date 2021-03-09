@@ -27,8 +27,8 @@ class ClasseController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required',
-            'graduation_year' => 'required'
+            'name' => 'required|string',
+            'graduation_year' => 'required|string'
         ]);
         if($validator->fails()) {
             return $validator->errors();
@@ -58,8 +58,8 @@ class ClasseController extends Controller
     public function update(Request $request, Classe $class)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required',
-            'graduation_year' => 'required'
+            'name' => 'required|string',
+            'graduation_year' => 'required|string'
         ]);
         if($validator->fails()) {
             return $validator->errors();
