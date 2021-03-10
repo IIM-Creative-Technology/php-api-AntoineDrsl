@@ -2,10 +2,10 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ClasseController;
+use App\Http\Controllers\MarkController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\TeacherController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +29,7 @@ Route::group([
 
 Route::middleware('jwt.auth')->group(function() {
     Route::apiResource('students', StudentController::class);
+    Route::apiResource('marks', MarkController::class)->only('store');
     Route::apiResources([
         'classes' => ClasseController::class,
         'teachers' => TeacherController::class,
@@ -38,4 +39,5 @@ Route::middleware('jwt.auth')->group(function() {
     ]);
 
     Route::get('classes/{class}/students', [ClasseController::class, 'students']);
+    Route::get('students/{student}/marks', [StudentController::class, 'marks']);
 });

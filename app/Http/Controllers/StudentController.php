@@ -85,4 +85,15 @@ class StudentController extends Controller
     {
         return $student->delete();
     }
+
+    /**
+     * Display a listing student's marks.
+     *
+     * @param  \App\Models\Student  $student
+     * @return \Illuminate\Http\Response
+     */
+    public function marks(Student $student)
+    {
+        return $student->marks;
+    }
 }
