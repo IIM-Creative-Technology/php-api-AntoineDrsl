@@ -37,7 +37,7 @@ class AuthController extends Controller
             return response()->json($e->getMessage(), 401);
         }
 
-        return response()->json('Logged out');
+        return response()->json(['message' => 'Logged out']);
     }
 
     public function guard()

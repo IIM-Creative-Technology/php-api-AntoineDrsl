@@ -20,7 +20,7 @@ class CreateMarksTable extends Migration
             $table->float('value', 3, 1);
             $table->timestamps();
 
-            $table->foreign('student_id')->references('id')->on('students');
+            $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');
             $table->foreign('subject_id')->references('id')->on('subjects');
         });
     }
