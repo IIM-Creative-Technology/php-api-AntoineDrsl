@@ -1,7 +1,11 @@
 <?php
 
 use App\Http\Controllers\AuthController;
-use Illuminate\Http\Request;
+use App\Http\Controllers\ClasseController;
+use App\Http\Controllers\MarkController;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\SubjectController;
+use App\Http\Controllers\TeacherController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,7 +28,16 @@ Route::group([
 });
 
 Route::middleware('jwt.auth')->group(function() {
-    Route::get('/test', function() {
-        return 'test';
-    });
+    Route::apiResource('students', StudentController::class);
+    Route::apiResource('marks', MarkController::class)->only('store');
+    Route::apiResources([
+        'classes' => ClasseController::class,
+        'teachers' => TeacherController::class,
+        'subjects' => SubjectController::class
+    ], [
+        'except' => 'destroy'
+    ]);
+
+    Route::get('classes/{class}/students', [ClasseController::class, 'students']);
+    Route::get('students/{student}/marks', [StudentController::class, 'marks']);
 });

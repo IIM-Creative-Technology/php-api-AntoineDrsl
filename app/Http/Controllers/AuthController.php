@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -30,7 +31,11 @@ class AuthController extends Controller
 
     public function logout()
     {
-        auth()->logout();
+        try {
+            auth()->logout();
+        } catch(Exception $e) {
+            return response()->json($e->getMessage(), 401);
+        }
 
         return response()->json('Logged out');
     }
