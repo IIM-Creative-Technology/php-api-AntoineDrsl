@@ -41,9 +41,9 @@ __Return__
 
 ```json
 {  
-    "access_token": string,  
-    "token_type": string,
-    "expires_in": int
+    "access_token": "string",  
+    "token_type": "string",
+    "expires_in": "int"
 }  
 ```
 
@@ -65,7 +65,7 @@ __Return__
 
 ```json
 {  
-    "message": string
+    "message": "string"
 }  
 ```
 
@@ -98,14 +98,14 @@ __Return__
 
 ```json
 {  
-    "id": int,
-    "classe_id": int,
-    "firstname": string,
-    "lastname": string,
-    "age": int,
-    "entry_year": date(Y),
-    "created_at": datetime,
-    "updated_at": datetime
+    "id": "int",
+    "classe_id": "int",
+    "firstname": "string",
+    "lastname": "string",
+    "age": "int",
+    "entry_year": "date(Y)",
+    "created_at": "datetime",
+    "updated_at": "datetime"
 }  
 ```
 
@@ -128,14 +128,14 @@ __Return__
 ```json
 [
     {  
-        "id": int,
-        "classe_id": int,
-        "firstname": string,
-        "lastname": string,
-        "age": int,
-        "entry_year": date(Y),
-        "created_at": datetime,
-        "updated_at": datetime
+        "id": "int",
+        "classe_id": "int",
+        "firstname": "string",
+        "lastname": "string",
+        "age": "int",
+        "entry_year": "date(Y)",
+        "created_at": "datetime",
+        "updated_at": "datetime"
     }
 ] 
 ```
@@ -162,14 +162,14 @@ __Return__
 
 ```json
 {  
-    "id": int,
-    "classe_id": int,
-    "firstname": string,
-    "lastname": string,
-    "age": int,
-    "entry_year": date(Y),
-    "created_at": datetime,
-    "updated_at": datetime
+    "id": "int",
+    "classe_id": "int",
+    "firstname": "string",
+    "lastname": "string",
+    "age": "int",
+    "entry_year": "date(Y)",
+    "created_at": "datetime",
+    "updated_at": "datetime"
 }
 ```
 
@@ -203,14 +203,14 @@ __Return__
 
 ```json
 {  
-    "id": int,
-    "classe_id": int,
-    "firstname": string,
-    "lastname": string,
-    "age": int,
-    "entry_year": date(Y),
-    "created_at": datetime,
-    "updated_at": datetime
+    "id": "int",
+    "classe_id": "int",
+    "firstname": "string",
+    "lastname": "string",
+    "age": "int",
+    "entry_year": "date(Y)",
+    "created_at": "datetime",
+    "updated_at": "datetime"
 }  
 ```
 
@@ -236,14 +236,14 @@ __Return__
 
 ```json
 {  
-    "id": int,
-    "classe_id": int,
-    "firstname": string,
-    "lastname": string,
-    "age": int,
-    "entry_year": date(Y),
-    "created_at": datetime,
-    "updated_at": datetime
+    "id": "int",
+    "classe_id": "int",
+    "firstname": "string",
+    "lastname": "string",
+    "age": "int",
+    "entry_year": "date(Y)",
+    "created_at": "datetime",
+    "updated_at": "datetime"
 }  
 ```
 
@@ -270,12 +270,12 @@ __Return__
 ```json
 [
     {  
-        "id": int,
-        "student_id": int,
-        "subject_id": int,
-        "value": float,
-        "created_at": datetime,
-        "updated_at": datetime
+        "id": "int",
+        "student_id": "int",
+        "subject_id": "int",
+        "value": "float",
+        "created_at": "datetime",
+        "updated_at": "datetime"
     }  
 ]
 ```
@@ -289,11 +289,11 @@ __Return__
 
 ```json
 {  
-    "id": int,
-    "name": string,
-    "graduation_year": date(Y),
-    "created_at": datetime,
-    "updated_at": datetime
+    "id": "int",
+    "name": "string",
+    "graduation_year": "date(Y)",
+    "created_at": "datetime",
+    "updated_at": "datetime"
 }  
 ```
 
@@ -314,12 +314,12 @@ UPDATE http://localhost:8000/api/classes/{id}
 
 ```json
 {  
-    "id": int,
-    "firstname": string,
-    "lastname": string,
-    "entry_year": date(Y),
-    "created_at": datetime,
-    "updated_at": datetime
+    "id": "int",
+    "firstname": "string",
+    "lastname": "string",
+    "entry_year": "date(Y)",
+    "created_at": "datetime",
+    "updated_at": "datetime"
 }  
 ```
 
@@ -340,14 +340,14 @@ UPDATE http://localhost:8000/api/teachers/{id}
 
 ```json
 {  
-    "id": int,
-    "classe_id": int,
-    "teacher_id": int,
-    "name": string,
-    "start": date(Y-m-d),
-    "end": date(Y-m-d),
-    "created_at": datetime,
-    "updated_at": datetime
+    "id": "int",
+    "classe_id": "int",
+    "teacher_id": "int",
+    "name": "string",
+    "start": "date(Y-m-d)",
+    "end": "date(Y-m-d)",
+    "created_at": "datetime",
+    "updated_at": "datetime"
 }  
 ```
 
@@ -368,12 +368,12 @@ UPDATE http://localhost:8000/api/subjects/{id}
 
 ```json
 {  
-    "id": int,
-    "student_id": int,
-    "subject_id": int,
-    "value": float,
-    "created_at": datetime,
-    "updated_at": datetime
+    "id": "int",
+    "student_id": "int",
+    "subject_id": "int",
+    "value": "float",
+    "created_at": "datetime",
+    "updated_at": "datetime"
 }  
 ```
 
